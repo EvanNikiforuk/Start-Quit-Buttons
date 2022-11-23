@@ -1,7 +1,7 @@
 //Global Variables
 int appWidth, appHeight;
 Boolean start=false, noNowReallyStart=false;
-float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+int quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
 void setup()
 {
