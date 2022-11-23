@@ -1,7 +1,7 @@
 //Global Variables
 int appWidth, appHeight;
 Boolean start=false, noNowReallyStart=false;
-int quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
 void setup()
 {
@@ -11,10 +11,10 @@ void setup()
   appHeight = height;
   //
   //Population
-  quitButtonX = ;
-  quitButtonY = ;
-  quitButtonWidth = ;
-  quitButtonHeight = ;
+  quitButtonX = appWidth * 1/4;
+  quitButtonY = appHeight * 1/4;
+  quitButtonWidth = appWidth * 10/20;
+  quitButtonHeight = appHeight * 10/20;
 } //End setup
 //
 void draw()
@@ -32,8 +32,12 @@ void keyPressed()
   if ( key==' ' && start==true ) noNowReallyStart = true;
   //
   //Prototype Key Board Quit Button OR shortcut
-  if ( key=='Q' || key=='q' ) exit(); //{};
-  if ( keyCode == ESC ) exit(); //{};
+  if ( key=='Q' || key=='q' ) exit();{
+    rect(50,50,100,50);
+  }
+  if ( keyCode == ESC ) exit();{
+    rect(50,50,100,50);
+  }
   //
 } //End keyPressed
 //
