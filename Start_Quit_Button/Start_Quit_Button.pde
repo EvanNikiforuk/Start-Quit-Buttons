@@ -1,28 +1,44 @@
 //Global Variables
 int appWidth, appHeight;
 Boolean start=false, noNowReallyStart=false;
-int quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+color quitButtonColour, yellow=#FFFF00 , red=#FF0000 ;
 //
 void setup()
 {
-  size (400, 300);
-  //fullscreen(); //displayWidth, displayHeight
-  appWidth = width;
+  //Display & ALgorithms not considered yet
+  size (400, 300); //Landscape
+  //fullScreen(); //displayWidth, displayHeight
+  appWidth = width; 
   appHeight = height;
   //
   //Population
-  quitButtonX = appWidth * 1/4;
-  quitButtonY = appHeight * 1/4;
-  quitButtonWidth = appWidth * 10/20;
-  quitButtonHeight = appHeight * 10/20;
+  float centerX = appWidth * 1/2; //Point
+  float centerY = appHeight * 1/2; //Point
+  quitButtonX = centerX - ( appWidth * 1/4 );
+  quitButtonY = centerY - ( appHeight * 1/4 );
+  quitButtonWidth = appWidth * 1/2; //Line not point, thus use formula
+  quitButtonHeight = appHeight * 1/2; //Line not point, thus use formula
 } //End setup
 //
 void draw()
 {
   if ( noNowReallyStart==true ) { //Actual start IF
     background(0); //Night Mode not considered yet
+    //
+    //Logical Rectangle
+    println("X-Value", quitButtonX, mouseX, quitButtonX+quitButtonWidth);
+    println("Y-Value", quitButtonY, mouseY, quitButtonY+quitButtonHeight);
+    //Quit Button Hover Over Feature
+    if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
+      quitButtonColour = red; //remember Night mode
+    } else {
+      quitButtonColour = yellow; //Remember day Mode
+    } //End Hover Over
+    //
+    fill(quitButtonColour);
     rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight ); //Quit Button
-  } //End IF-Sart
+  } //End IF-STart
   //
 } //End draw
 //
@@ -32,22 +48,21 @@ void keyPressed()
   if ( key==' ' && start==true ) noNowReallyStart = true;
   //
   //Prototype Key Board Quit Button OR shortcut
-  if ( key=='Q' || key=='q' ) exit();{
-    rect(50,50,100,50);
-  }
-  if ( keyCode == ESC ) exit();{
-    rect(50,50,100,50);
-  }
+  if ( key=='Q' || key=='q' ) exit();
+  if ( keyCode == ESC ) exit();
   //
 } //End keyPressed
 //
 void mousePressed()
 {
   //
-  //Os Level Start Button
+  //OS Level Start Button
   start = true;
-  println("To Start, Press Left/Right mouse button then Press the Space bar");
+  println("To Start, Press the Space Bar");
   //
-} //End keyPreesed
+  //Quit Button: Logical Rectangle, see println in draw()
+  if ( noNowReallyStart==true && mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
+  //
+} //End mousePressed
 //
 //End Main Program
