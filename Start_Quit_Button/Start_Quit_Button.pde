@@ -16,28 +16,23 @@ void setup()
 //
 void draw()
 {
-  if ( noNowReallyStart==true ) {
+  if ( noNowReallyStart==true ) { //Actual start IF
     programDraw();
   } //End IF-STart
 } //End draw
 //
 void keyPressed()
 {
-  //
+  //User Initiate Start Screen
   if ( key==' ' && start==true ) noNowReallyStart = true;
   //
-  //Prototype Key Board Quit Button OR shortcut
-  if ( key=='Q' || key=='q' ) exit();
-  if ( keyCode == ESC ) exit();
+  keyBoardShortcuts();
   //
 } //End keyPressed
 //
 void mousePressed()
 {
-  //
-  //OS Level Start Button
-  start = true;
-  println("To Start, Press the Space Bar");
+  OS_Start();
   //
   //Quit Button: Logical Rectangle, see println in draw()
   if ( noNowReallyStart==true && mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
