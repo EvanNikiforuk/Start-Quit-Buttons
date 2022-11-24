@@ -16,23 +16,9 @@ void setup()
 //
 void draw()
 {
-  if ( noNowReallyStart==true ) { //Actual start IF
-    background(0); //Night Mode not considered yet
-    //
-    //Logical Rectangle
-    println("X-Value", quitButtonX, mouseX, quitButtonX+quitButtonWidth);
-    println("Y-Value", quitButtonY, mouseY, quitButtonY+quitButtonHeight);
-    //Quit Button Hover Over Feature
-    if ( noNowReallyStart==true && mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
-      quitButtonColour = red; //remember Night mode
-    } else {
-      quitButtonColour = yellow; //Remember day Mode
-    } //End Hover Over
-    //
-    fill(quitButtonColour);
-    rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight ); //Quit Button
+  if ( noNowReallyStart==true ) {
+    programDraw();
   } //End IF-STart
-  //
 } //End draw
 //
 void keyPressed()
