@@ -2,12 +2,13 @@
 int appWidth, appHeight;
 Boolean start=false, noNowReallyStart=false;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+float quitButton2X, quitButton2Y, quitButton2Width, quitButton2Height;
 float quitMenuX, quitMenuY, quitMenuWidth, quitMenuHeight;
 float quitYesMenuX, quitYesMenuY, quitYesMenuWidth, quitYesMenuHeight;
 float quitNoMenuX, quitNoMenuY, quitNoMenuWidth, quitNoMenuHeight;
 float barX, barY,barWidth, barHeight;
 color quitButtonColour, yellow=#FFFF00 , red=#FF0000 ;
-String MenuText="Are You Sure You Want To Quit?", MenuYesText="YES", MenuNoText="NO(Press'N')", boxText="Exit, No Questions Asked", barText="To Start, Mouse Click, Press the Space Bar";
+String MenuText="Are You Sure You Want To Quit?", MenuYesText="YES", MenuNoText="NO(Press'N')", boxText="Exit, No Questions", barText="To Start, Mouse Click, Press the Space Bar";
 PFont titleFont;
 PImage areYouSurePic, yesPic, noPic;
 //

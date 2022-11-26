@@ -3,7 +3,6 @@ void population() {
   areYouSurePic = loadImage("../Images Used/are-you-sure.png");
   yesPic = loadImage("../Images Used/featured-image-yes.jpg");
   noPic = loadImage("../Images Used/download.png");
-  //
   quitButtonX = displayWidth * 3/4;
   quitButtonY = displayHeight * 3/4;
   quitButtonWidth = displayWidth * 3/10; //Line not point, thus use formula
