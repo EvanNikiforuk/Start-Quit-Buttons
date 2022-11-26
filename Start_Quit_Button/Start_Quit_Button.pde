@@ -7,7 +7,7 @@ float quitYesMenuX, quitYesMenuY, quitYesMenuWidth, quitYesMenuHeight;
 float quitNoMenuX, quitNoMenuY, quitNoMenuWidth, quitNoMenuHeight;
 float barX, barY,barWidth, barHeight;
 color quitButtonColour, yellow=#FFFF00 , red=#FF0000 ;
-String MenuText="Are You Sure You Want To Quit?", MenuYesText="YES", MenuNoText="NO(Press'N')", boxText="Exit, No Questions Asked", barText="To Start, Press the Space Bar";
+String MenuText="Are You Sure You Want To Quit?", MenuYesText="YES", MenuNoText="NO(Press'N')", boxText="Exit, No Questions Asked", barText="To Start, Mouse Click, Press the Space Bar";
 PFont titleFont;
 PImage areYouSurePic, yesPic, noPic;
 //
@@ -31,7 +31,7 @@ void draw()
     fill(0,255,0);
     rect(barX, barY,barWidth, barHeight);
     //
-    textSize(100);
+    textSize(70);
     fill(0);
     text( barText, barX, barY,barWidth, barHeight );
     textAlign(CENTER, BASELINE); //Align X&Y, see Processing.org / Reference
