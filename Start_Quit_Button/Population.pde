@@ -1,24 +1,33 @@
 void population() {
   //Population
-  quitButtonX = appWidth * 3/4;
-  quitButtonY = appHeight * 3/4;
-  quitButtonWidth = appWidth * 3/10; //Line not point, thus use formula
-  quitButtonHeight = appHeight * 3/10; //Line not point, thus use formula
+  areYouSurePic = loadImage("../Images Used/are-you-sure.png");
+  yesPic = loadImage("../Images Used/featured-image-yes.jpg");
+  noPic = loadImage("../Images Used/download.png");
   //
-  quitMenuX = appWidth * 0.5/4;
-  quitMenuY = appHeight * 0.5/4;
-  quitMenuWidth = appWidth * 7.5/10;
-  quitMenuHeight = appHeight * 7.5/10;
+  quitButtonX = displayWidth * 3/4;
+  quitButtonY = displayHeight * 3/4;
+  quitButtonWidth = displayWidth * 3/10; //Line not point, thus use formula
+  quitButtonHeight = displayHeight * 3/10; //Line not point, thus use formula
   //
-  quitYesMenuX = appWidth * 0.5/4;
-  quitYesMenuY = appHeight * 2.5/4;
-  quitYesMenuWidth = appWidth * 3.75/10;
-  quitYesMenuHeight = appHeight * 2.5/10;
+  quitMenuX = displayWidth * 0.5/4;
+  quitMenuY = displayHeight * 0.5/4;
+  quitMenuWidth = displayWidth * 7.5/10;
+  quitMenuHeight = displayHeight * 7.5/10;
   //
-  quitNoMenuX = appWidth * 2/4;
-  quitNoMenuY = appHeight * 2.5/4;
-  quitNoMenuWidth = appWidth * 3.75/10;
-  quitNoMenuHeight = appHeight * 2.5/10;
+  quitYesMenuX = displayWidth * 0.5/4;
+  quitYesMenuY = displayHeight * 2.5/4;
+  quitYesMenuWidth = displayWidth * 3.75/10;
+  quitYesMenuHeight = displayHeight * 2.5/10;
+  //
+  quitNoMenuX = displayWidth * 2/4;
+  quitNoMenuY = displayHeight * 2.5/4;
+  quitNoMenuWidth = displayWidth * 3.75/10;
+  quitNoMenuHeight = displayHeight * 2.5/10;
+  //
+  barX = displayWidth * 0.5/4;
+  barY = displayHeight * 0.5/4;
+  barWidth = displayWidth * 3/4;
+  barHeight = displayHeight * 0.5/4;
   //
   titleFont = createFont("Sitka Text", 55); 
   //
